@@ -56,7 +56,7 @@ class FragmentRestaurant : Fragment() {
                         )
                     }
 
-                    val arrayAdapter = ArrayAdapter<Restaurant>(context!!,android.R.layout.simple_expandable_list_item_1,restaurants)
+                    val arrayAdapter = RestaurantCustomAdapter(context!!, restaurants )
                     listresto.adapter = arrayAdapter
 
 
@@ -93,6 +93,8 @@ class FragmentRestaurant : Fragment() {
 
 
     }
+
+
 
 
 
