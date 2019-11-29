@@ -5,11 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".FragmentRestaurant">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
+        android:id="@+id/listresto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Daftar Restaurant"
-        android:textSize="36sp" />
-
+        android:layout_height="match_parent" />
 </FrameLayout>
