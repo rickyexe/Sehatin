@@ -50,7 +50,8 @@ class FragmentTipsMakan : Fragment() {
                                 tipsmakan.getInt("id"),
                                 tipsmakan.getString("title"),
                                 tipsmakan.getString("sumber"),
-                                tipsmakan.getString("link")
+                                tipsmakan.getString("link"),
+                                tipsmakan.getString("logo")
                             )
                         )
                     }
