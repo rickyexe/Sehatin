@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imgResto" />
 
     <TextView
         android:id="@+id/txtAlamat"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNama" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgResto"
         android:layout_width="416dp"
         android:layout_height="202dp"
         app:srcCompat="@mipmap/ic_launcher"
@@ -58,8 +58,8 @@
         android:background="@drawable/googlemaps"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.798"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintStart_toStartOf="@+id/imgResto"
+        app:layout_constraintTop_toBottomOf="@+id/imgResto" />
 
     <Button
         android:id="@+id/btnPhone"
@@ -69,10 +69,10 @@
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
         android:background="@drawable/phone"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imgResto"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintStart_toStartOf="@+id/imgResto"
+        app:layout_constraintTop_toBottomOf="@+id/imgResto" />
 
     <TextView
         android:id="@+id/txtReview"

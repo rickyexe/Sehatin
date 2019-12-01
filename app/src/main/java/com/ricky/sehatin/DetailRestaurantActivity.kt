@@ -9,6 +9,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail_restaurant.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -38,6 +39,8 @@ class DetailRestaurantActivity : AppCompatActivity() {
                     txtNama.text = restaurant.getString("nama_restaurant")
                     txtAlamat.text = restaurant.getString("alamat_restaurant")
                     txtJam.text = restaurant.getString("jam_buka")
+                    val image = restaurant.getString("foto")
+                    Picasso.with(applicationContext).load(image).resize(416,202).into(imgResto)
 
                     btnMaps.setOnClickListener {
                         val i  = Intent()

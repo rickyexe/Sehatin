@@ -54,7 +54,8 @@ class FragmentRestaurant : Fragment() {
                             Restaurant(
                                 resto.getInt("id"),
                                 resto.getString("nama_restaurant"),
-                                resto.getString("alamat_restaurant")
+                                resto.getString("alamat_restaurant"),
+                                resto.getString("logo")
                             )
                         )
                     }
