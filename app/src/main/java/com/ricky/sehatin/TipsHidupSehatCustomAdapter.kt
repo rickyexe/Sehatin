@@ -7,28 +7,23 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 
-class RestaurantCustomAdapter(val thiscontext: Context,
-                              val resto: ArrayList<Restaurant>)
-    : ArrayAdapter<Restaurant>(thiscontext,R.layout.listrestaurant_layout, resto ) {
+class TipsHidupSehatCustomAdapter(val thiscontext: Context,
+                              val tipshidup: ArrayList<TipsHidupSehat>)
+    : ArrayAdapter<TipsHidupSehat>(thiscontext,R.layout.listtipshidupsehat_layout, tipshidup ) {
 
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val inflater = thiscontext.getSystemService(Context.LAYOUT_INFLATER_SERVICE)
                 as LayoutInflater
 
-        val v = inflater.inflate(R.layout.listrestaurant_layout,parent,false)
+        val v = inflater.inflate(R.layout.listtipshidupsehat_layout,parent,false)
         val nama = v.findViewById<TextView>(R.id.txtTitle)
-        val alamat = v.findViewById<TextView>(R.id.txtSumber)
+        val sumber = v.findViewById<TextView>(R.id.txtSumber)
 
-        nama.text = resto[position].name.toString()
-        alamat.text = resto[position].alamat.toString()
+        nama.text = tipshidup[position].title.toString()
+        sumber.text = tipshidup[position].sumber.toString()
         return v
 
     }
 
 }
-
-
-
-
-

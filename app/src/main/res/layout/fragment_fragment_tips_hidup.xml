@@ -5,11 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".FragmentTipsHidup">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
+        android:id="@+id/listtipshidup"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Tips hidup sehat"
-        android:textSize="36sp" />
-
+        android:layout_height="match_parent" />
 </FrameLayout>

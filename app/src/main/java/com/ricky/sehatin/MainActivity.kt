@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         scrollview.isFillViewport = true
+
+
 //        val fragmentManager = supportFragmentManager
 //        val transaction = fragmentManager.beginTransaction()
 //
@@ -79,8 +81,9 @@ class MainActivity : AppCompatActivity() {
 
         val fa = FragmentAdapter(supportFragmentManager)
         fa.addFragment(FragmentRestaurant())
-        fa.addFragment(FragmentTipsMakan())
         fa.addFragment(FragmentTipsHidup())
+        fa.addFragment(FragmentTipsMakan())
+
         fa.addFragment(FragmentProfile())
         viewpager.adapter = fa
         tabs.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener {

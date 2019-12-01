@@ -1,6 +1,7 @@
 package com.ricky.sehatin
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -18,16 +19,18 @@ import kotlinx.android.synthetic.main.fragment_fragment_restaurant.*
 import org.json.JSONException
 import org.json.JSONObject
 
+
+
 /**
  * A simple [Fragment] subclass.
  */
 class FragmentRestaurant : Fragment() {
+
     var restaurants = ArrayList<Restaurant>()
-//    fun TampilResto(p: ArrayList<Restaurant>) {
-//         restaurants = p
-//        val arrayAdapter = ArrayAdapter<Restaurant>(context!!, android.R.layout.simple_list_item_1, p)
-//        listAdapter = arrayAdapter
-//    }
+
+
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,6 +62,22 @@ class FragmentRestaurant : Fragment() {
                     val arrayAdapter = RestaurantCustomAdapter(context!!, restaurants )
                     listresto.adapter = arrayAdapter
 
+                    listresto.setOnItemClickListener { adapterView, view, i, l ->
+
+                        var intent = Intent(context!! , DetailRestaurantActivity::class.java)
+                        intent.putExtra(DetailRestaurantActivity.id , restaurants[i].id)
+
+                        startActivity(intent)
+
+
+
+
+
+
+
+
+                    }
+
 
 
                 } catch (e: JSONException) {
@@ -80,12 +99,11 @@ class FragmentRestaurant : Fragment() {
         q.add(stringRequest)
 
 
-//
-//
-//
-//
+
 
         return something
+
+
 
 
 
