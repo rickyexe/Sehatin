@@ -48,7 +48,8 @@ class FragmentTipsHidup : Fragment() {
                                 tipshidup.getInt("id"),
                                 tipshidup.getString("title"),
                                 tipshidup.getString("sumber"),
-                                tipshidup.getString("link")
+                                tipshidup.getString("link"),
+                                tipshidup.getString("logo")
                             )
                         )
                     }
