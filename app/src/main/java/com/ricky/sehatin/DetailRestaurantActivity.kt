@@ -1,6 +1,8 @@
 package com.ricky.sehatin
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -95,47 +97,9 @@ class DetailRestaurantActivity : AppCompatActivity() {
 
         q.add(stringRequest)
 
-//        val url2 = "http://riset.group/penir/penir_d8/viewrestaurantdetail.php"
-//        var stringRequest2 = StringRequest(Request.Method.GET, url,
-//            Response.Listener<String>
-//            { response ->
-//                try {
-//                    val obj = JSONObject(response)
-//                    val arr = obj.getJSONArray("restoran")
-//
-//                    for (i in 0 until arr.length()) {
-//                        val restaurant = arr.getJSONObject(i)
-//
-//                       txtNama.text = restaurant.toString()
-//
-//
-//
-//
-//
-//
-//                    }
-//
-//
-////                    txtNama.text = resto[0]
-////                    txtAlamat.text = resto[1]
-//
-//                } catch (e: JSONException) {
-//                    Toast.makeText(
-//                        this, e.message.toString(),
-//                        Toast.LENGTH_SHORT
-//                    ).show()
-//                }
-//
-//            },
-//            Response.ErrorListener
-//            { response ->
-//                Toast.makeText(
-//                    this, response.toString(),
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//
-//            })
-//        q.add(stringRequest2)
+
+
+
 
 
 
