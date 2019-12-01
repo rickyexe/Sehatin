@@ -17,8 +17,8 @@ class TipsHidupSehatCustomAdapter(val thiscontext: Context,
                 as LayoutInflater
 
         val v = inflater.inflate(R.layout.listtipshidupsehat_layout,parent,false)
-        val nama = v.findViewById<TextView>(R.id.txtTitle)
-        val sumber = v.findViewById<TextView>(R.id.txtSumber)
+        val nama = v.findViewById<TextView>(R.id.txtNama)
+        val sumber = v.findViewById<TextView>(R.id.txtAlamat)
 
         nama.text = tipshidup[position].title.toString()
         sumber.text = tipshidup[position].sumber.toString()

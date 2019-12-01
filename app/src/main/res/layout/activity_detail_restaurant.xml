@@ -7,31 +7,83 @@
     tools:context=".DetailRestaurantActivity">
 
     <TextView
-        android:id="@+id/txtTitle"
+        android:id="@+id/txtNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginLeft="176dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginRight="176dp"
-        android:text="TextView"
+        android:layout_marginTop="12dp"
+        android:text="Madame Chang"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
-        android:id="@+id/txtSumber"
+        android:id="@+id/txtAlamat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="93dp"
-        android:layout_marginLeft="93dp"
-        android:layout_marginTop="304dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:text="TextView"
+        android:layout_marginTop="12dp"
+        android:text="Jl Something"
+        app:layout_constraintEnd_toEndOf="@+id/txtNama"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtNama"
+        app:layout_constraintTop_toBottomOf="@+id/txtNama" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="416dp"
+        android:layout_height="202dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <TextView
+        android:id="@+id/txtJam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="09.00 - 21 .00"
+        app:layout_constraintEnd_toEndOf="@+id/txtAlamat"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtAlamat"
+        app:layout_constraintTop_toBottomOf="@+id/txtAlamat" />
+
+    <Button
+        android:id="@+id/btnMaps"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/googlemaps"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.522"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/btnPhone"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:background="@drawable/phone"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/txtReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Review"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtJam"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtJam"
+        app:layout_constraintTop_toBottomOf="@+id/txtJam" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

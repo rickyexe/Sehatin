@@ -47,7 +47,8 @@ class FragmentTipsHidup : Fragment() {
                             TipsHidupSehat(
                                 tipshidup.getInt("id"),
                                 tipshidup.getString("title"),
-                                tipshidup.getString("sumber")
+                                tipshidup.getString("sumber"),
+                                tipshidup.getString("link")
                             )
                         )
                     }
@@ -55,21 +56,20 @@ class FragmentTipsHidup : Fragment() {
                     val arrayAdapter = TipsHidupSehatCustomAdapter(context!!, tipshidupsehat )
                     listtipshidup.adapter = arrayAdapter
 
-//                    listresto.setOnItemClickListener { adapterView, view, i, l ->
-//
-//                        var intent = Intent(context!! , DetailRestaurantActivity::class.java)
-//                        intent.putExtra(DetailRestaurantActivity.id , restaurants[i].id)
-//
-//                        startActivity(intent)
-//
-//
-//
-//
-//
-//
-//
-//
-//                    }
+                    listtipshidup.setOnItemClickListener { adapterView, view, i, l ->
+
+                        var intent = Intent(context!! , BeritaActivity::class.java)
+                        intent.putExtra(BeritaActivity.link , tipshidupsehat[i].link)
+                        startActivity(intent)
+
+
+
+
+
+
+
+
+                    }
 
 
 

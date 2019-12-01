@@ -83,7 +83,6 @@ class MainActivity : AppCompatActivity() {
         fa.addFragment(FragmentRestaurant())
         fa.addFragment(FragmentTipsHidup())
         fa.addFragment(FragmentTipsMakan())
-
         fa.addFragment(FragmentProfile())
         viewpager.adapter = fa
         tabs.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener {

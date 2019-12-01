@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailRestaurantActivity"></activity>
+        <activity android:name=".BeritaActivity"></activity>
+        <activity android:name=".DetailRestaurantActivity" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"

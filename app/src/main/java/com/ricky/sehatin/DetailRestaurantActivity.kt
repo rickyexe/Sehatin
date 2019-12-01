@@ -1,5 +1,7 @@
 package com.ricky.sehatin
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -30,10 +32,43 @@ class DetailRestaurantActivity : AppCompatActivity() {
                 val arr = obj.getJSONArray("restoran")
 
 
+
                 for (i in 0 until arr.length()) {
                     val restaurant = arr.getJSONObject(i)
-                    txtTitle.text = restaurant.getString("nama_restaurant")
-                    txtSumber.text = restaurant.getString("alamat_restaurant")
+                    txtNama.text = restaurant.getString("nama_restaurant")
+                    txtAlamat.text = restaurant.getString("alamat_restaurant")
+                    txtJam.text = restaurant.getString("jam_buka")
+
+                    btnMaps.setOnClickListener {
+                        val i  = Intent()
+                        val destination = restaurant.getString("nama_restaurant")
+
+
+                        i.action = Intent.ACTION_VIEW
+                        i.data = Uri.parse("geo:0,0?q=$destination")
+
+                        if(i.resolveActivity(packageManager) != null) {
+                            startActivity(i)
+                        }
+
+                    }
+
+                    btnPhone.setOnClickListener {
+
+                        val phoneNumber = restaurant.getString("telepon")
+                        val intent = Intent(Intent.ACTION_DIAL).apply {
+                            data = Uri.parse("tel:$phoneNumber")
+                        }
+                        if (intent.resolveActivity(packageManager) != null) {
+                            startActivity(intent)
+                        }
+
+                    }
+
+
+
+
+
 
                 }
 
