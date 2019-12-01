@@ -1,5 +1,7 @@
 package com.ricky.sehatin
 
+import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -16,66 +18,33 @@ import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
 
+//    private var PRIVATE_MODE = 0
+//    private val PREF_NAME = "login"
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         var restaurants = ArrayList<Restaurant>()
         super.onCreate(savedInstanceState)
+
+//        val sharedPref: SharedPreferences = getSharedPreferences(PREF_NAME, PRIVATE_MODE)
+//        if (sharedPref.getBoolean(PREF_NAME, false)) {
+//            val homeIntent = Intent(this, DetailRestaurantActivity::class.java)
+//            startActivity(homeIntent)
+//            finish()
+//        } else {
+//            setContentView(R.layout.activity_main)
+//            setViewPager()
+//            val editor = sharedPref.edit()
+//            editor.putBoolean(PREF_NAME, true)
+//            editor.apply()
+//        }
+
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         scrollview.isFillViewport = true
 
-
-//        val fragmentManager = supportFragmentManager
-//        val transaction = fragmentManager.beginTransaction()
-//
-//        val fragment = FragmentRestaurant()
-//
-//
-//        transaction.add(R.id.container, fragment)
-//        transaction.addToBackStack(null)
-//        transaction.commit()
-//
-//
-//        val q = Volley.newRequestQueue(this)
-//        val url = "http://riset.group/penir/penir_d8/viewrestaurantlist.php"
-//        var stringRequest = StringRequest(
-//            Request.Method.GET, url,
-//            Response.Listener<String>
-//            { response ->
-//                try {
-//                    val obj = JSONObject(response)
-//                    val arr = obj.getJSONArray("restoran")
-//                    restaurants = ArrayList<Restaurant>()
-//                    for (i in 0 until arr.length()) {
-//                        val resto = arr.getJSONObject(i)
-//                        restaurants.add(
-//                            Restaurant(
-//                                resto.getInt("id"),
-//                                resto.getString("nama_restaurant"),
-//                                resto.getString("alamat_restaurant")
-//                            )
-//                        )
-//
-//                    }
-//
-//                    fragment.TampilResto(restaurants)
-//
-//                } catch (e: JSONException) {
-//                    Toast.makeText(
-//                        this, e.message.toString(),
-//                        Toast.LENGTH_SHORT
-//                    ).show()
-//                }
-//
-//            },
-//            Response.ErrorListener
-//            { response ->
-//                Toast.makeText(
-//                    this, response.toString(),
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//
-//            })
-//        q.add(stringRequest)
 
 
 

@@ -21,7 +21,7 @@ class RestaurantCustomAdapter(val thiscontext: Context,
         val v = inflater.inflate(R.layout.listrestaurant_layout,parent,false)
         val nama = v.findViewById<TextView>(R.id.txtNama)
         val alamat = v.findViewById<TextView>(R.id.txtAlamat)
-        val logo = v.findViewById<ImageView>(R.id.imgLogo)
+        val logo = v.findViewById<ImageView>(R.id.imgTipsHidup)
 
         nama.text = resto[position].name.toString()
         alamat.text = resto[position].alamat.toString()
