@@ -1,8 +1,6 @@
 package com.ricky.sehatin
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -98,6 +96,149 @@ class DetailRestaurantActivity : AppCompatActivity() {
         }
 
         q.add(stringRequest)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//
+//        btnTmbhKom.setOnClickListener {
+//
+//
+//            val homeIntent = Intent(this, TambahKomentarActivity::class.java)
+//            homeIntent.putExtra(TambahKomentarActivity.idrestoran, id )
+//            startActivity(homeIntent)
+//
+//
+//        }
 
 
 
