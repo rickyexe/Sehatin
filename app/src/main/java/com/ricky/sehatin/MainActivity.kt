@@ -18,8 +18,7 @@ import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
 
-//    private var PRIVATE_MODE = 0
-//    private val PREF_NAME = "login"
+
 
 
 
@@ -28,18 +27,7 @@ class MainActivity : AppCompatActivity() {
         var restaurants = ArrayList<Restaurant>()
         super.onCreate(savedInstanceState)
 
-//        val sharedPref: SharedPreferences = getSharedPreferences(PREF_NAME, PRIVATE_MODE)
-//        if (sharedPref.getBoolean(PREF_NAME, false)) {
-//            val homeIntent = Intent(this, DetailRestaurantActivity::class.java)
-//            startActivity(homeIntent)
-//            finish()
-//        } else {
-//            setContentView(R.layout.activity_main)
-//            setViewPager()
-//            val editor = sharedPref.edit()
-//            editor.putBoolean(PREF_NAME, true)
-//            editor.apply()
-//        }
+
 
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)

@@ -1,6 +1,8 @@
 package com.ricky.sehatin
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -23,6 +25,8 @@ class DetailRestaurantActivity : AppCompatActivity() {
 
         val intent = this.intent
         val id = intent.getIntExtra(id,0)
+
+//        Toast.makeText(this, id.toString(), Toast.LENGTH_SHORT).show()
 
         val q = Volley.newRequestQueue(this)
         val url = "http://riset.group/penir/penir_d8/viewdetailrestaurant.php"
@@ -117,13 +121,7 @@ class DetailRestaurantActivity : AppCompatActivity() {
                     ).show()
                 }
 
-            },
-            Response.ErrorListener
-            { response ->
-                Toast.makeText(
-                    this, response.toString(),
-                    Toast.LENGTH_SHORT
-                ).show()
+
 
             })
         q.add(stringRequest2)
