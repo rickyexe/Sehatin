@@ -25,6 +25,8 @@ class DetailRestaurantActivity : AppCompatActivity() {
         val intent = this.intent
         val id = intent.getIntExtra(id,0)
 
+//        Toast.makeText(this, id.toString(), Toast.LENGTH_SHORT).show()
+
         val q = Volley.newRequestQueue(this)
         val url = "http://riset.group/penir/penir_d8/viewdetailrestaurant.php"
         val stringRequest = object: StringRequest(Request.Method.DEPRECATED_GET_OR_POST, url, Response.Listener<String>
@@ -96,14 +98,6 @@ class DetailRestaurantActivity : AppCompatActivity() {
         }
 
         q.add(stringRequest)
-
-
-
-
-
-
-
-
 
 
 

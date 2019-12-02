@@ -70,6 +70,8 @@ class FragmentRestaurant : Fragment() {
 
                         startActivity(intent)
 
+//                        Toast.makeText(context, restaurants[i].id.toString(), Toast.LENGTH_SHORT).show()
+
 
 
 

@@ -7,58 +7,19 @@
     tools:context=".RegisterActivity"
     android:background="@drawable/bglogin">
 
-    <EditText
-        android:id="@+id/txtUsername"
-        android:layout_width="288dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="80dp"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        android:nextFocusDown="@+id/editText"
-        android:textColor="@android:color/white"
-        android:textColorHighlight="@android:color/white"
-        android:textColorHint="@android:color/white"
-        android:textColorLink="@android:color/white"
-        app:backgroundTint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="0.422"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-
-    <EditText
-        android:id="@+id/txtPassword"
-        android:layout_width="288dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPersonName"
-        android:textColor="@android:color/white"
-        android:textColorHighlight="@android:color/white"
-        android:textColorHint="@android:color/white"
-        android:textColorLink="@android:color/white"
-        app:backgroundTint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@+id/txtUsername"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtUsername"
-        app:layout_constraintTop_toBottomOf="@+id/txtUsername" />
-
-
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="287dp"
         android:layout_height="48dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/bluebutton"
         android:text="REGISTER"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@+id/txtPassword"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/txtPassword"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/txtPasswordRegister"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtPasswordRegister"
+        app:layout_constraintTop_toBottomOf="@+id/txtPasswordRegister" />
 
     <TextView
         android:id="@+id/textView2"
@@ -74,8 +35,8 @@
 
     <TextView
         android:id="@+id/txtMasuk"
-        android:layout_width="135dp"
-        android:layout_height="15dp"
+        android:layout_width="139dp"
+        android:layout_height="18dp"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="32dp"
@@ -83,7 +44,7 @@
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/btnRegister"
-        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="@+id/btnRegister"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
@@ -93,13 +54,49 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="168dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="REGISTER"
         android:textColor="@android:color/white"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtUsernameRegister"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@android:color/white"
+        android:capitalize="none"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColorLink="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/txtPasswordRegister"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColorLink="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/txtUsernameRegister"
+        app:layout_constraintStart_toStartOf="@+id/txtUsernameRegister"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsernameRegister" />
 </androidx.constraintlayout.widget.ConstraintLayout>
