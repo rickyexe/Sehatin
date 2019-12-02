@@ -11,11 +11,12 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail_restaurant.*
+import kotlinx.android.synthetic.main.activity_detail_restaurant.listrev
 import org.json.JSONException
 import org.json.JSONObject
 
 class DetailRestaurantActivity : AppCompatActivity() {
-    var resto = ArrayList<String>()
+    var komen = ArrayList<Review>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_restaurant)
@@ -25,14 +26,13 @@ class DetailRestaurantActivity : AppCompatActivity() {
 
         val q = Volley.newRequestQueue(this)
         val url = "http://riset.group/penir/penir_d8/viewdetailrestaurant.php"
+        val url2 = "http://riset.group/penir/penir_d8/viewkomentarlist.php"
         val stringRequest = object: StringRequest(Request.Method.DEPRECATED_GET_OR_POST, url, Response.Listener<String>
         {
                 response ->
             try {
                 val obj = JSONObject(response)
                 val arr = obj.getJSONArray("restoran")
-
-
 
                 for (i in 0 until arr.length()) {
                     val restaurant = arr.getJSONObject(i)
@@ -68,11 +68,6 @@ class DetailRestaurantActivity : AppCompatActivity() {
 
                     }
 
-
-
-
-
-
                 }
 
 
@@ -84,6 +79,7 @@ class DetailRestaurantActivity : AppCompatActivity() {
             }
 
         },
+
             Response.ErrorListener {})
         {
             override fun getParams() : Map<String, String> {
@@ -94,56 +90,43 @@ class DetailRestaurantActivity : AppCompatActivity() {
         }
 
         q.add(stringRequest)
+        var stringRequest2 = StringRequest(
+            Request.Method.GET, url2,
+            Response.Listener<String>
+            { response ->
+                try {
+                    val obj = JSONObject(response)
+                    val arr = obj.getJSONArray("komentar")
+                     komen = ArrayList<Review>()
+                    for (i in 0 until arr.length()) {
+                        val rev = arr.getJSONObject(i)
+                        komen.add(
+                            Review(
+                                rev.getString("username"),
+                                rev.getString("tanggal"),
+                                rev.getString("komentar")
+                            )
+                        )
+                    }
+                    val arrayAdapter2 = ReviewCustomAdapter(this, komen )
+                    listrev.adapter = arrayAdapter2
+                } catch (e: JSONException) {
+                    Toast.makeText(
+                        this, e.message.toString(),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
 
-//        val url2 = "http://riset.group/penir/penir_d8/viewrestaurantdetail.php"
-//        var stringRequest2 = StringRequest(Request.Method.GET, url,
-//            Response.Listener<String>
-//            { response ->
-//                try {
-//                    val obj = JSONObject(response)
-//                    val arr = obj.getJSONArray("restoran")
-//
-//                    for (i in 0 until arr.length()) {
-//                        val restaurant = arr.getJSONObject(i)
-//
-//                       txtNama.text = restaurant.toString()
-//
-//
-//
-//
-//
-//
-//                    }
-//
-//
-////                    txtNama.text = resto[0]
-////                    txtAlamat.text = resto[1]
-//
-//                } catch (e: JSONException) {
-//                    Toast.makeText(
-//                        this, e.message.toString(),
-//                        Toast.LENGTH_SHORT
-//                    ).show()
-//                }
-//
-//            },
-//            Response.ErrorListener
-//            { response ->
-//                Toast.makeText(
-//                    this, response.toString(),
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//
-//            })
-//        q.add(stringRequest2)
+            },
+            Response.ErrorListener
+            { response ->
+                Toast.makeText(
+                    this, response.toString(),
+                    Toast.LENGTH_SHORT
+                ).show()
 
-
-
-
-
-
-
-
+            })
+        q.add(stringRequest2)
 
 
     }

@@ -6,7 +6,7 @@
     tools:context=".FragmentRestaurant">
 
     <ListView
-        android:id="@+id/listresto"
+        android:id="@+id/listrev"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
