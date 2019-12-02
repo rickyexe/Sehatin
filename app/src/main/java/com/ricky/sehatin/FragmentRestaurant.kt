@@ -12,6 +12,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import kotlinx.android.synthetic.main.activity_detail_restaurant.*
 import kotlinx.android.synthetic.main.fragment_fragment_restaurant.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -58,9 +59,9 @@ class FragmentRestaurant : Fragment() {
                     }
 
                     val arrayAdapter = RestaurantCustomAdapter(context!!, restaurants )
-                    listrev.adapter = arrayAdapter
+                    listresto.adapter = arrayAdapter
 
-                    listrev.setOnItemClickListener { adapterView, view, i, l ->
+                    listresto.setOnItemClickListener { adapterView, view, i, l ->
 
                         var intent = Intent(context!! , DetailRestaurantActivity::class.java)
                         intent.putExtra(DetailRestaurantActivity.id , restaurants[i].id)
