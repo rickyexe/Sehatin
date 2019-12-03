@@ -51,7 +51,7 @@ class FragmentProfile : Fragment() {
             startActivity(homeIntent)
         }
 
-        Toast.makeText(context, iduser.toString(), Toast.LENGTH_LONG).show()
+
 
         val q = Volley.newRequestQueue(context)
         val url = "http://riset.group/penir/penir_d8/profile.php"
