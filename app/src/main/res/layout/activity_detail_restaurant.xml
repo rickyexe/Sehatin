@@ -53,13 +53,11 @@
         android:id="@+id/btnMaps"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
         android:layout_marginTop="108dp"
         android:background="@drawable/googlemaps"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.791"
-        app:layout_constraintStart_toStartOf="@+id/imgResto"
+        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintStart_toEndOf="@+id/txtReview"
         app:layout_constraintTop_toBottomOf="@+id/imgResto" />
 
     <Button
