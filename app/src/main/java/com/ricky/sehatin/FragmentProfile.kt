@@ -60,21 +60,19 @@ class FragmentProfile : Fragment() {
                 Request.Method.DEPRECATED_GET_OR_POST, url, Response.Listener<String>
                 { response ->
                     try {
-                        val obj = JSONObject(response)
-                        val arr = obj.getJSONArray("profile")
-
-                        for (i in 0 until arr.length()) {
-                            val profile = arr.getJSONObject(i)
-
-                            txtJumlahReview.text = profile.getInt("komentar").toString()
-                            txtProfile.text = profile.getString("username")
 
 
-                        }
+                            val obj = JSONObject(response)
+                            val arr = obj.getJSONArray("profile")
+
+                            for (i in 0 until arr.length()) {
+                                val profile = arr.getJSONObject(i)
+
+                                txtJumlahReview.text = profile.getInt("komentar").toString()
+                                txtProfile.text = profile.getString("username")
 
 
-
-
+                            }
 
 
 

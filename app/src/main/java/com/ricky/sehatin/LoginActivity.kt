@@ -19,7 +19,6 @@ import org.json.JSONObject
 
 class LoginActivity : AppCompatActivity() {
 
-
     var MODE_PRIVATE = 0
     val PREF_NAME = "login"
 
@@ -31,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
 
         val sharedPref: SharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
 
-        if (sharedPref.getBoolean(PREF_NAME, false)) {
+        if (sharedPref.getBoolean(PREF_NAME, true)) {
             val Intent = Intent(this, MainActivity::class.java)
             startActivity(Intent)
             finish()
@@ -53,9 +52,6 @@ class LoginActivity : AppCompatActivity() {
                     {
                             response ->
                         try {
-
-
-
 
 
                             val respon = response.substring(0,8)

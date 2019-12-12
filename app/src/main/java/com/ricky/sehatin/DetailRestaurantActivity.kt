@@ -111,8 +111,6 @@ class DetailRestaurantActivity : AppCompatActivity() {
                         val arr = obj.getJSONArray("komentar")
 
 
-
-
                         komen = ArrayList<Review>()
                         for (i in 0 until arr.length()) {
                             val rev = arr.getJSONObject(i)
